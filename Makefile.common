@@ -32,6 +32,7 @@ PROGRAMS = \
 	gob_loadcalc \
 	extract_mohawk \
 	construct_mohawk \
+	msn_convert_mod \
 	scummvm-tools-cli
 
 ifdef USE_BOOST
@@ -156,6 +157,11 @@ extract_mohawk_OBJS := \
 construct_mohawk_OBJS := \
 	engines/mohawk/construct_mohawk.o \
 	$(UTILS)
+
+msn_convert_mod_OBJS := \
+	common/file.o \
+	common/util.o \
+	engines/supernova/convert_mod.o
 
 pegasus_save_types_OBJS := \
 	engines/pegasus/pegasus_save_types.o \
